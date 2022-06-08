@@ -9,6 +9,5 @@
 </script>
 
 <img
-	src={url}
-	style="position: absolute; left: {x}%; top:{y}%;background:{color} ;z-index: {z}; width:{width}%;height:{height}%;"
+	src={url} style="position: absolute; left: {x}%; top:{y}%;background:{color} ;z-index: {z}; width:{width}%;height:{height}%;"
 />

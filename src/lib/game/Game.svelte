@@ -13,7 +13,6 @@
 	$: innerWidth = 0;
 	$: outerHeight = 0;
 	$: outerWidth = 0;
-
 </script>
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
@@ -29,22 +28,28 @@
 		bind:this={rootElement}
 	>
 		<!-- Content-IN-MAP-GAME -->
-		<div class="map-game" bind:clientWidth={wMap} bind:clientHeight={hMap}>
-			<slot name="content">
+
+		<div
+			id="map-game"
+			name="map-game"
+			class="map-game"
+			bind:clientWidth={wMap}
+			bind:clientHeight={hMap}
+		>
+			<slot name="content" touch>
 				<!-- Component Content/content -->
 			</slot>
 		</div>
+
+		<!-- MENU GAME -->
+		<slot name="menu-fixed" touch>
+			<!-- Component Menu-fixed ใช้สำหรับเมนูที่สร้างเอง -->
+		</slot>
+		<!-- MENU GAME IMAGE -->
+		<slot name="menu-image" touch>
+			<!-- Component Menu-fixed-image ใช้สำหรับใส่เมนูที่เป้นรูปภาพ -->
+		</slot>
 	</div>
-
-	<!-- MENU GAME IMAGE -->
-	<slot name="menu-image">
-		<!-- Component Menu-fixed-image ใช้สำหรับใส่เมนูที่เป้นรูปภาพ -->
-	</slot>
-	<!-- MENU GAME -->
-
-	<slot name="menu-fixed">
-		<!-- Component Menu-fixed ใช้สำหรับเมนูที่สร้างเอง -->
-	</slot>
 </main>
 
 <style>
@@ -60,17 +65,21 @@
 		min-height: var(--viewport-height);
 		max-height: var(--viewport-height);
 		margin: 0 auto;
+		overflow: auto;
+
 		background-color: orange;
-		overflow: scroll;
 	}
 	.map-game {
 		position: absolute;
-		top: var(--game-top);
+		/*	top: var(--game-top);
 		left: var(--game-left);
+		*/
+		background-image: url(https://images.squarespace-cdn.com/content/v1/5bfd4ea8da02bc9d0eeb4fa0/1544986285085-NVDZYK5X54B48XF6EPD0/CoolMap.png?format=1000w);
+		min-zoom: 50%;
+		background-size: 100% 100%;
+		width: 1666px;
+		height: 1128px;
 
-		width: 1024px;
-		height: 1024px;
-
-		background-color: rgb(247, 252, 252);
+		background-color: white;
 	}
 </style>

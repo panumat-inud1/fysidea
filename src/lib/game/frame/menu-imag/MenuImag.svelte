@@ -8,5 +8,5 @@
 
 <img
 	src={url}
-	style="position: fixed;top: {y}%;left: {x}%; width:height: {height}%;width: {width}%; auto;background-color: transparent;"
+	style="position: absolute;top: {y}%;left: {x}%; width:height: {height}%;width: {width}%; auto;background-color: transparent;"
 />
