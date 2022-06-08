@@ -13,22 +13,8 @@
 	$: innerWidth = 0;
 	$: outerHeight = 0;
 	$: outerWidth = 0;
-	$: percentage = 200 / 100;
-</script>
 
-<!--<div class="game" bind:this={rootElement}>
-	<h1>Hello @fysidea/ui/game</h1>
-	<div style="right: 0px; top:0px; width:24px;height:24px;background:red;position: absolute;">
-		2
-	</div>
-	<div style="right: 0px; bottom:0px; width:24px;height:24px;background:red;position: absolute;">
-		3
-	</div>
-	<div style="left: 0px; top:0px; width:24px;height:24px;background:red;position: absolute;">1</div>
-	<div style="left: 0px; bottom:0px; width:24px;height:24px;background:red;position: absolute;">
-		4
-	</div>
-</div>-->
+</script>
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 
@@ -63,14 +49,9 @@
 
 <style>
 	:root {
-		--game-height: inherit;
-		--game-width: inherit;
-		--game-background-color: inherit;
-		--login-height: inherit;
-		--login-width: inherit;
-		--login-top: inherit;
-		--login-left: inherit;
 		--viewport-height: inherit;
+		--game-top: inherit;
+		--game-left: inherit;
 	}
 
 	.viewport {
@@ -85,10 +66,11 @@
 	.map-game {
 		position: absolute;
 		top: var(--game-top);
-		
+		left: var(--game-left);
 
 		width: 1024px;
 		height: 1024px;
-		background-color: aqua;
+
+		background-color: rgb(247, 252, 252);
 	}
 </style>

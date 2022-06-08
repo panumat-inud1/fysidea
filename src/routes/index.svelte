@@ -10,8 +10,8 @@
 			x={10}
 			y={10}
 			z
-			width={50}
-			height={50}
+			width={10}
+			height={10}
 			color={'green'}
 			url={'https://img.pikbest.com/png-images/20190919/national-day-red-cartoon-car-travel-dynamic-gif-element_2676556.png!c1024wm0'}
 		/>
