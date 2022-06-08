@@ -3,7 +3,8 @@
 	$: rootElement && rootElement.style.setProperty('--viewport-height', innerHeight + 'px');
 
 	$: rootElement && rootElement.style.setProperty('--game-top', (100 - (hMap / h) * 100) / 2 + '%');
-	$: rootElement && rootElement.style.setProperty('--game-left', (100 - (wMap / w) * 100) / 2 + '%');
+	$: rootElement &&
+		rootElement.style.setProperty('--game-left', (100 - (wMap / w) * 100) / 2 + '%');
 
 	$: wMap = 1024;
 	$: hMap = 1024;
@@ -36,17 +37,17 @@
 			bind:clientWidth={wMap}
 			bind:clientHeight={hMap}
 		>
-			<slot name="content" touch>
+			<slot name="content">
 				<!-- Component Content/content -->
 			</slot>
 		</div>
 
 		<!-- MENU GAME -->
-		<slot name="menu-fixed" touch>
+		<slot name="menu-fixed">
 			<!-- Component Menu-fixed ใช้สำหรับเมนูที่สร้างเอง -->
 		</slot>
 		<!-- MENU GAME IMAGE -->
-		<slot name="menu-image" touch>
+		<slot name="menu-image">
 			<!-- Component Menu-fixed-image ใช้สำหรับใส่เมนูที่เป้นรูปภาพ -->
 		</slot>
 	</div>

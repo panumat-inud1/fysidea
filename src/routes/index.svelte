@@ -16,19 +16,20 @@
 			url={'https://img.pikbest.com/png-images/20190919/national-day-red-cartoon-car-travel-dynamic-gif-element_2676556.png!c1024wm0'}
 		/>
 	</div>
+
 	<div slot="menu-fixed">
 		<MenuFixed x={0} y={95}>
 			<div slot="item">
-                <div class="progress" />
-            </div>
+				<div class="progress" />
+			</div>
 		</MenuFixed>
 	</div>
 </Game>
 
 <style>
 	.progress {
-        height: 30px;
-        width: 100px;
-        background-color: rgb(238, 17, 5);
+		height: 30px;
+		width: 100px;
+		background-color: rgb(238, 17, 5);
 	}
 </style>
