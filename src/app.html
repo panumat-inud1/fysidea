@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- SMUI Styles -->
+	<link rel="stylesheet" href="/smui.css" media="(prefers-color-scheme: light)" />
+	<link rel="stylesheet" href="/smui-dark.css" media="screen and (prefers-color-scheme: dark)" />
+	%sveltekit.head%
+	<style>
+		body {
+			min-height: 100vh;
+			margin: 0px;
+			padding: 0px;
+			background-color: var(--primary-color);
+			background: linear-gradient(180deg,
+					var(--primary-color) 0%,
+					var(--secondary-color) 10.45%,
+					var(--tertiary-color) 41.35%);
+		}
+
+		@media only screen and (orientation: landscape) {
+			/*body {
+				transform: rotate(0deg);
+			}*/
+		}
+
+		/* width */
+		::-webkit-scrollbar {
+			width: 5px;
+			height: 5px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 5px grey;
+			border-radius: 10px;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: red;
+			border-radius: 10px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #b30000;
+		}
+	</style>
+</head>
+
+<body>
+	<div>%sveltekit.body%</div>
+</body>
+
+</html>
