@@ -16,12 +16,12 @@
 
 <div
 	class="position"
-	style="	position: fixed;
+	style="position: absolute;
 				top: {y}%;
 				left:{x}%;
 				width: auto;
-				height: auto;"
->
+				height: auto;z-index: 2;"
+>	
 	<slot name="item" />
 </div>
 
@@ -32,4 +32,7 @@
 	.position {
 		left: var(--position-left);
 	}*/
+	@media (max-width: 834px) {
+		
+	}
 </style>

@@ -3,8 +3,7 @@
 	$: rootElement && rootElement.style.setProperty('--viewport-height', innerHeight + 'px');
 
 	$: rootElement && rootElement.style.setProperty('--game-top', (100 - (hMap / h) * 100) / 2 + '%');
-	$: rootElement &&
-		rootElement.style.setProperty('--game-left', (100 - (wMap / w) * 100) / 2 + '%');
+	$: rootElement && rootElement.style.setProperty('--game-left', (100 - (wMap / w) * 100) / 2 + '%');
 
 	$: wMap = 1024;
 	$: hMap = 1024;
@@ -19,7 +18,7 @@
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 
 <main>
-	<!-- Screen Game ขนาดของหน้าจอเกมส์-->
+	
 	<div
 		id="viewport"
 		name="viewport"
@@ -28,28 +27,23 @@
 		bind:clientHeight={h}
 		bind:this={rootElement}
 	>
-		<!-- Content-IN-MAP-GAME -->
-
-		<div
-			id="map-game"
-			name="map-game"
-			class="map-game"
-			bind:clientWidth={wMap}
-			bind:clientHeight={hMap}
-		>
-			<slot name="content">
-				<!-- Component Content/content -->
-			</slot>
-		</div>
-
 		<!-- MENU GAME -->
-		<slot name="menu-fixed">
+		<slot name="menu-custom">
 			<!-- Component Menu-fixed ใช้สำหรับเมนูที่สร้างเอง -->
 		</slot>
 		<!-- MENU GAME IMAGE -->
 		<slot name="menu-image">
 			<!-- Component Menu-fixed-image ใช้สำหรับใส่เมนูที่เป้นรูปภาพ -->
 		</slot>
+
+		<!-- Screen Game ขนาดของหน้าจอเกมส์-->
+		<div class="display-game">
+			<div class="map-game">
+				<slot name="content">
+					<!-- Component Content-Game -->
+				</slot>
+			</div>
+		</div>
 	</div>
 </main>
 
@@ -66,21 +60,27 @@
 		min-height: var(--viewport-height);
 		max-height: var(--viewport-height);
 		margin: 0 auto;
-		overflow: auto;
-
 		background-color: orange;
 	}
+
+	.display-game {
+		position: absolute;
+		top: 0%;
+		left: 0%;
+
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: aqua;
+		z-index: 1;
+	}
+
 	.map-game {
 		position: absolute;
-		/*	top: var(--game-top);
-		left: var(--game-left);
-		*/
 		background-image: url(https://images.squarespace-cdn.com/content/v1/5bfd4ea8da02bc9d0eeb4fa0/1544986285085-NVDZYK5X54B48XF6EPD0/CoolMap.png?format=1000w);
-		min-zoom: 50%;
-		background-size: 100% 100%;
-		width: 1666px;
-		height: 1128px;
 
-		background-color: white;
+		background-size: 100% 100%;
+		width: 1550px;
+		height: 1050px;
 	}
 </style>
