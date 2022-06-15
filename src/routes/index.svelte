@@ -8,23 +8,13 @@
 	import HoshiCoin from '$lib/game/component/coins/HoshiCoin.svelte';
 	import Setting from '$lib/game/component/setting/Setting.svelte';
 	import MenuFixedR from '$lib/game/frame/menu/MenuFixedR.svelte';
+	import Owner from '$lib/game/component/market/owner/owner.svelte';
 </script>
 
 <Game ww={1200} hh={1200}>
 	<!-- Conten in Map Game-->
 	<div slot="content">
-		<!-- 	{#each images as image}
-			<Content
-				x={image.x}
-				y={image.y}
-				z
-				width={image.width}
-				height={image.height}
-				color
-				url={image.src}
-			/>
-		{/each}
-	-->
+		<Owner />
 	</div>
 	<!-- Menu Game -->
 	<div slot="menu-custom">
@@ -54,9 +44,5 @@
 		</MenuFixedR>
 
 		<Setting />
-		
 	</div>
-
-	
 </Game>
-
