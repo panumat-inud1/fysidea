@@ -12,8 +12,11 @@
 	let menu = 'การตั้งค่า';
 	let language = 'ภาษาไทย';
 	let exit = 'ออกระบบ';
-	
-	</script>
+	let support = 'ความช่วยเหลือ';
+	let credit = 'เครดิต';
+	let guidebook = 'คู่มือแนะนำ';
+	let policy = 'นโยบายส่วนตัว';
+</script>
 
 <div class="setting" on:click={() => (open = !open)}>
 	<div class="out-frame">
@@ -50,23 +53,67 @@
 					</div>
 					<!-- Contet main -->
 					<div class="main-content">
-
-						<!-- language botton -->
-						<div class="language-modal">
-							<div class="language-top-modal"/>
-								<div class="language-fonte">
-									{language}
+						<div class="col-2">
+							<div class="grid-item">
+								<!-- language botton -->
+								<div class="language-modal">
+									<div class="language-top-modal" />
+									<div class="language-fonte">
+										{language}
+									</div>
 								</div>
+							</div>
+							<div class="grid-item">
+								<!-- exit botton -->
+								<div class="exit-modal">
+									<div class="exit-top-modal" />
+									<div class="exit-fonte">
+										{exit}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="grid-item">
+								<!-- support botton -->
+								<div class="support-modal">
+									<div class="support-top-modal" />
+									<div class="support-fonte">
+										{support}
+									</div>
+								</div>
+							</div>
+							<div class="grid-item">
+								<!-- policy botton -->
+								<div class="policy-modal">
+									<div class="policy-top-modal" />
+									<div class="policy-fonte">
+										{policy}
+									</div>
+								</div>
+							</div>
 						</div>
 
-						<!-- exit botton -->
-						<div class="exit-modal">
-							<div class="exit-top-modal"/>
-								<div class="exit-fonte">
-									{exit}
+						<div class="col-2">
+							<div class="grid-item">
+								<!-- guidebook botton -->
+								<div class="guidebook-modal">
+									<div class="guidebook-top-modal" />
+									<div class="guidebook-fonte">
+										{guidebook}
+									</div>
 								</div>
+							</div>
+							<div class="grid-item">
+								<!-- credit botton -->
+								<div class="credit-modal">
+									<div class="credit-top-modal" />
+									<div class="credit-fonte">
+										{credit}
+									</div>
+								</div>
+							</div>
 						</div>
-
 
 						<div class="line-center" />
 					</div>
@@ -130,11 +177,11 @@
 	/* Modal */
 	.modal {
 		position: absolute;
-		top: 25%;
+		top: 18%;
 		left: 5%;
 
 		width: 90%;
-		height: 70%;
+		height: 80%;
 		border-radius: 12px;
 		border: 1px solid rgba(10, 10, 10, 0.785);
 		background-color: #6b6b6b;
@@ -243,55 +290,56 @@
 
 	/* Grid Display */
 	.col-2 {
+		position: absolute;
+		width: 100%;
 		height: 100%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.grid-item {
+		display: flex;
+		justify-content: center;
 	}
 
 	/* language Botton green */
 	.language-modal {
 		position: absolute;
 		top: 20%;
-		left: 10%;
-
-		height: 12%;
-		width: 32%;
-
+		height: 24px;
+		width: 128px;
 		border-radius: 6px;
 		background-color: rgb(3, 246, 3);
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
 	}
 	.language-modal:active {
-		height: 10%;
-		width: 30%;
+		height: 22px;
+		width: 126px;
 	}
 
 	.language-top-modal {
 		position: absolute;
 		top: 2%;
 		left: 2%;
-
 		width: 96%;
 		height: 50%;
 		border-radius: 6px;
 		background-color: rgba(255, 255, 255, 0.487);
 	}
-	.language-fonte{
+	.language-fonte {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		text-align: center;
 		text-shadow: 1px 1px 0px rgba(10, 10, 10, 1);
 	}
+
 	/* exit Botton green  */
 	.exit-modal {
 		position: absolute;
 		top: 20%;
-		right: 10%;
-
-		height: 12%;
-		width: 32%;
+		height: 24px;
+		width: 128px;
 
 		border-radius: 6px;
 		background-color: rgb(3, 246, 3);
@@ -299,8 +347,8 @@
 		z-index: 2;
 	}
 	.exit-modal:active {
-		height: 10%;
-		width: 30%;
+		height: 22px;
+		width: 126px;
 	}
 
 	.exit-top-modal {
@@ -313,7 +361,145 @@
 		border-radius: 6px;
 		background-color: rgba(255, 255, 255, 0.487);
 	}
-	.exit-fonte{
+	.exit-fonte {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		text-shadow: 1px 1px 0px rgba(10, 10, 10, 1);
+	}
+
+	/* policy Botton green  */
+	.policy-modal {
+		position: absolute;
+		top: 60%;
+		height: 24px;
+		width: 128px;
+
+		border-radius: 6px;
+		background-color: rgb(3, 246, 3);
+		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
+		z-index: 2;
+	}
+	.policy-modal:active {
+		height: 22px;
+		width: 126px;
+	}
+
+	.policy-top-modal {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+
+		width: 96%;
+		height: 50%;
+		border-radius: 6px;
+		background-color: rgba(255, 255, 255, 0.487);
+	}
+	.policy-fonte {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		text-shadow: 1px 1px 0px rgba(10, 10, 10, 1);
+	}
+	/* guidebook Botton green  */
+	.guidebook-modal {
+		position: absolute;
+		top: 60%;
+		height: 24px;
+		width: 128px;
+
+		border-radius: 6px;
+		background-color: rgb(3, 246, 3);
+		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
+		z-index: 2;
+	}
+	.guidebook-modal:active {
+		height: 22px;
+		width: 126px;
+	}
+
+	.guidebook-top-modal {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+
+		width: 96%;
+		height: 50%;
+		border-radius: 6px;
+		background-color: rgba(255, 255, 255, 0.487);
+	}
+	.guidebook-fonte {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		text-shadow: 1px 1px 0px rgba(10, 10, 10, 1);
+	}
+
+	/* support Botton green  */
+	.support-modal {
+		position: absolute;
+		top: 80%;
+		height: 24px;
+		width: 128px;
+
+		border-radius: 6px;
+		background-color: rgb(3, 246, 3);
+		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
+		z-index: 2;
+	}
+	.support-modal:active {
+		height: 22px;
+		width: 126px;
+	}
+
+	.support-top-modal {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+
+		width: 96%;
+		height: 50%;
+		border-radius: 6px;
+		background-color: rgba(255, 255, 255, 0.487);
+	}
+	.support-fonte {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		text-shadow: 1px 1px 0px rgba(10, 10, 10, 1);
+	}
+	/* credit Botton green  */
+	.credit-modal {
+		position: absolute;
+		top: 80%;
+		height: 24px;
+		width: 128px;
+
+		border-radius: 6px;
+		background-color: rgb(3, 246, 3);
+		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
+		z-index: 2;
+	}
+	.credit-modal:active {
+		height: 22px;
+		width: 126px;
+	}
+
+	.credit-top-modal {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+
+		width: 96%;
+		height: 50%;
+		border-radius: 6px;
+		background-color: rgba(255, 255, 255, 0.487);
+	}
+	.credit-fonte {
 		position: absolute;
 		width: 100%;
 		height: 100%;
