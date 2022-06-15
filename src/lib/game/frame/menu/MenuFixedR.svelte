@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let x = 0;
+	export let xr = 0;
 	export let y = 0;
 	
 
@@ -20,7 +20,7 @@
 	class="position"
 	style="position: absolute;
 				top: {y}%;
-				left:{x}%;
+				right:{xr}%;
 				
 				width: auto;
 				height: auto;

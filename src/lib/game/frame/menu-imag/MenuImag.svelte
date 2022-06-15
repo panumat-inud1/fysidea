@@ -10,3 +10,4 @@
 	src={url}
 	style="position: absolute;top: {y}%;left: {x}%; width:height: {height}%;width: {width}%; auto;background-color: transparent; z-index:2;"
 />
+
