@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal, subModal } from './setting';
+	import { Modal, subModal } from '../store';
 
 	// import icon
 	import { mdiCog, mdiCloseThick } from '@mdi/js';
@@ -260,7 +260,6 @@
 	}
 	span {
 		text-shadow: 1px 1px 0px rgba(10, 10, 10, 1);
-		
 	}
 	.header-content {
 		position: absolute;
@@ -307,7 +306,6 @@
 
 	/* language Botton green */
 	.language-modal {
-		
 		position: absolute;
 		top: 20%;
 		height: 24px;
