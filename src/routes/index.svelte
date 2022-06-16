@@ -9,13 +9,27 @@
 	import Setting from '$lib/game/component/setting/Setting.svelte';
 	import MenuFixedR from '$lib/game/frame/menu/MenuFixedR.svelte';
 	import Owner from '$lib/game/component/market/owner/owner.svelte';
+	import Saefood from '$lib/game/component/market/saefood/Saefood.svelte';
+	import BtnOwner from '$lib/game/component/market/owner/BtnOwner.svelte';
+	import BtnSaefood from '$lib/game/component/market/saefood/BtnSaefood.svelte';
 </script>
 
 <Game ww={1200} hh={1200}>
 	<!-- Conten in Map Game-->
 	<div slot="content">
-		<Owner />
+		<MenuFixed x={10} y={20}>
+			<div slot="item">
+				<BtnOwner />
+			</div>
+		</MenuFixed>
+
+		<MenuFixed x={28} y={30}>
+			<div slot="item">
+				<BtnSaefood />
+			</div>
+		</MenuFixed>
 	</div>
+
 	<!-- Menu Game -->
 	<div slot="menu-custom">
 		<!-- Profile-->
@@ -44,5 +58,7 @@
 		</MenuFixedR>
 
 		<Setting />
+		<Owner />
+		<Saefood />
 	</div>
 </Game>

@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { Modal, subModal } from './store';
+
 	// import icon
-	import { mdiCog, mdiCloseThick } from '@mdi/js';
+	import { mdiHomeCircleOutline, mdiCloseThick } from '@mdi/js';
 	import IconButton, { Icon } from '@smui/icon-button';
 	import { Svg } from '@smui/common/elements';
-
 	// import animation
 	let open = false;
 	import { slide, fade } from 'svelte/transition';
@@ -18,24 +19,14 @@
 	let policy = 'นโยบายส่วนตัว';
 </script>
 
-<div class="setting" on:click={() => (open = !open)}>
-	<div class="out-frame">
-		<div class="in-frame">
-			<Icon component={Svg} viewBox="0 0 24 24">
-				<path fill="currentColor" d={mdiCog} />
-			</Icon>
-		</div>
-	</div>
-</div>
-
-{#if open}
+{#if $Modal}
 	<div class="background-shadown" transition:fade={{ delay: 50, duration: 200 }}>
 		<div class="modal">
 			<div class="frame-out-modal">
 				<div class="frame-top-modal" />
 				<div class="menu-modal"><span>{menu}</span></div>
 				<!--Botton Clode-->
-				<div class="close-modal" on:click={() => (open = !open)}>
+				<div class="close-modal" on:click={Modal.coles}>
 					<div class="close-top-modal" />
 					<Icon component={Svg} viewBox="0 0 24 24">
 						<path fill="currentColor" d={mdiCloseThick} />
@@ -122,58 +113,8 @@
 		</div>
 	</div>
 {/if}
-<span>{open}</span>
 
 <style>
-	:root {
-		--s-height: inherit;
-		--setting-width: inherit;
-		--setting-height: inherit;
-	}
-	.setting {
-		position: absolute;
-		right: 10%;
-		bottom: 10%;
-
-		height: 36px;
-		width: 36px;
-
-		z-index: 2;
-	}
-	.out-frame {
-		position: absolute;
-		left: 0px;
-
-		height: 100%;
-		width: 100%;
-		border-radius: 12px;
-		border: 1px solid white;
-		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
-	}
-	.in-frame {
-		position: absolute;
-		width: 96%;
-		height: 96%;
-
-		background-color: rgba(249, 83, 12, 0.849);
-		border-radius: 12px;
-		border: 1px solid rgba(201, 57, 4, 0.498);
-		text-align: center;
-	}
-
-	.setting:active {
-		height: 34px;
-		width: 34px;
-	}
-	/*Background modal*/
-	.background-shadown {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-
-		background-color: rgba(0, 0, 0, 0.303);
-		z-index: 3;
-	}
 	/* Modal */
 	.modal {
 		position: absolute;
