@@ -1,6 +1,6 @@
 <script lang="ts">
 	//import { Modal, subModal } from './store';
-	import { mdSaefood, subModal, Tab } from '../../setting/setting';
+	import { mdSaefood, subModal, Tab } from './saefood';
 	// import icon
 	import { mdiStorefront } from '@mdi/js';
 	import IconButton, { Icon } from '@smui/icon-button';

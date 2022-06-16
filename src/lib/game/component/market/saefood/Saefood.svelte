@@ -1,6 +1,6 @@
 <script lang="ts">
 	
-	import { mdSaefood, subModal, Tab } from '../../setting/setting';
+	import { mdSaefood, subModal, Tab } from './saefood';
 	// import icon
 	import { mdiHomeCircleOutline, mdiCloseThick } from '@mdi/js';
 	import IconButton, { Icon } from '@smui/icon-button';

@@ -13,13 +13,17 @@
 	//saefood
 	import Saefood from '$lib/game/component/market/saefood/Saefood.svelte';
 	import BtnSaefood from '$lib/game/component/market/saefood/BtnSaefood.svelte';
+	import BtnOwner from '$lib/game/component/market/owner/BtnOwner.svelte';
+	import Owner from '$lib/game/component/market/owner/Owner.svelte';
 </script>
 
 <Game ww={1200} hh={1200}>
 	<!-- Conten in Map Game-->
 	<div slot="content">
 		<MenuFixed x={10} y={20}>
-			<div slot="item" />
+			<div slot="item">
+				<BtnOwner />
+			</div>
 		</MenuFixed>
 
 		<MenuFixed x={28} y={30}>
@@ -57,7 +61,7 @@
 		</MenuFixedR>
 
 		<Setting />
-
+		<Owner />
 		<Saefood />
 	</div>
 </Game>
