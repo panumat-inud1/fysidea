@@ -13,8 +13,9 @@
 	//saefood
 	import Saefood from '$lib/game/component/market/saefood/Saefood.svelte';
 	import BtnSaefood from '$lib/game/component/market/saefood/BtnSaefood.svelte';
+	import BtnOwner from '$lib/game/component/owner/BtnOwner.svelte';
+
 	//owner
-	import BtnOwner from '$lib/game/component/market/owner/BtnOwner.svelte';
 </script>
 
 <Game ww={1200} hh={1200}>
