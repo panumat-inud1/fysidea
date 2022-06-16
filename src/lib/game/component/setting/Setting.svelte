@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal, subModal } from '../store';
+	import { Modal, subModal } from './setting';
 
 	// import icon
 	import { mdiCog, mdiCloseThick } from '@mdi/js';
