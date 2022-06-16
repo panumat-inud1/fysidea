@@ -11,19 +11,6 @@
 
 	// List of tab items with labels, values and assigned components
 	import Tabs from './Tabs.svelte';
-	import Machine from './tab/Machine.svelte';
-	import Tab2 from './tab/Tab2.svelte';
-	import Tab3 from './tab/Tab3.svelte';
-	import Tab4 from './tab/Tab4.svelte';
-	import Tab5 from './tab/Tab5.svelte';
-
-	let items = [
-		{ label: 'Machine', value: 1, component: Machine ,x:5,y:0,t:Tab.tab1},
-		{ label: 'Tab2', value: 2, component: Tab2 ,x:24,y:0,t:Tab.tab2},
-		{ label: 'Tab3', value: 3, component: Tab3 ,x:44,y:0,t:Tab.tab3},
-		{ label: 'Tab4', value: 4, component: Tab4 ,x:63,y:0,t:Tab.tab4},
-		{ label: 'Tab5', value: 5, component: Tab5 ,x:80,y:0,t:Tab.tab5}
-	];
 
 	// Menu
 	let menu = 'Owners';
@@ -43,7 +30,7 @@
 					</Icon>
 				</div>
 				<div class="content">
-					<Tabs {items} />
+					<Tabs />
 				</div>
 			</div>
 		</div>
@@ -124,7 +111,6 @@
 	.menu-modal {
 		position: absolute;
 		top: 1%;
-		
 
 		width: 100%;
 		text-align: center;
@@ -141,6 +127,5 @@
 
 		width: 99%;
 		height: 95%;
-	
 	}
 </style>
