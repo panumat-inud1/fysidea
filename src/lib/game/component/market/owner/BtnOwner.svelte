@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Modal, subModal } from './Owner';
+	import { Modal, subModal } from './owner';
 
 	// import icon
-	import { mdiHomeCircleOutline } from '@mdi/js';
+	import { mdiHomeCircleOutline ,mdiAccountCash } from '@mdi/js';
 	import IconButton, { Icon } from '@smui/icon-button';
 	import { Svg } from '@smui/common/elements';
 </script>
@@ -27,6 +27,7 @@
 		width: 36px;
 
 		z-index: 2;
+		cursor: pointer;
 	}
 	.out-frame {
 		position: absolute;

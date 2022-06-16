@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal, subModal } from './store';
+	//import { Modal, subModal } from './store';
 
 	// import icon
 	import { mdiStorefront } from '@mdi/js';
@@ -7,7 +7,7 @@
 	import { Svg } from '@smui/common/elements';
 </script>
 
-<div class="btn-saefood" on:click={Modal.open}>
+<div class="btn-saefood" >
 	<div class="out-frame">
 		<div class="in-frame">
 			<Icon component={Svg} viewBox="0 0 24 24">

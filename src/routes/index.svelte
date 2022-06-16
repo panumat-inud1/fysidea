@@ -1,17 +1,23 @@
 <script lang="ts">
 	import MenuFixed from '$lib/game/frame/menu/MenuFixed.svelte';
+	import MenuFixedR from '$lib/game/frame/menu/MenuFixedR.svelte';
 	import Game from '$lib/game/Game.svelte';
-
+	//profile
 	import Profile from '$lib/game/component/profile/Profile.svelte';
+	//coin
 	import YutaCoin from '$lib/game/component/coins/YutaCoin.svelte';
 	import HaruCoin from '$lib/game/component/coins/HaruCoin.svelte';
 	import HoshiCoin from '$lib/game/component/coins/HoshiCoin.svelte';
+	//setting
 	import Setting from '$lib/game/component/setting/Setting.svelte';
-	import MenuFixedR from '$lib/game/frame/menu/MenuFixedR.svelte';
-	import Owner from '$lib/game/component/market/owner/owner.svelte';
+	//saefood
 	import Saefood from '$lib/game/component/market/saefood/Saefood.svelte';
-	import BtnOwner from '$lib/game/component/market/owner/BtnOwner.svelte';
 	import BtnSaefood from '$lib/game/component/market/saefood/BtnSaefood.svelte';
+	//owner
+	import BtnOwner from '$lib/game/component/market/owner/BtnOwner.svelte';
+	import Owner from '$lib/game/component/market/owner/Owner.svelte';
+
+	// Owner
 </script>
 
 <Game ww={1200} hh={1200}>

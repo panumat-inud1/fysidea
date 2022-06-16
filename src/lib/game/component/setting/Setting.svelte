@@ -140,6 +140,7 @@
 		width: 36px;
 
 		z-index: 2;
+		cursor: pointer;
 	}
 	.out-frame {
 		position: absolute;
@@ -221,6 +222,7 @@
 		background-color: red;
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
+		cursor: pointer;
 	}
 	.close-modal:active {
 		height: 34px;
@@ -258,6 +260,7 @@
 	}
 	span {
 		text-shadow: 1px 1px 0px rgba(10, 10, 10, 1);
+		
 	}
 	.header-content {
 		position: absolute;
@@ -304,6 +307,7 @@
 
 	/* language Botton green */
 	.language-modal {
+		
 		position: absolute;
 		top: 20%;
 		height: 24px;
@@ -312,6 +316,7 @@
 		background-color: rgb(3, 246, 3);
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
+		cursor: pointer;
 	}
 	.language-modal:active {
 		height: 22px;
@@ -346,6 +351,7 @@
 		background-color: rgb(3, 246, 3);
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
+		cursor: pointer;
 	}
 	.exit-modal:active {
 		height: 22px;
@@ -381,6 +387,7 @@
 		background-color: rgb(3, 246, 3);
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
+		cursor: pointer;
 	}
 	.policy-modal:active {
 		height: 22px;
@@ -415,6 +422,7 @@
 		background-color: rgb(3, 246, 3);
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
+		cursor: pointer;
 	}
 	.guidebook-modal:active {
 		height: 22px;
@@ -450,6 +458,7 @@
 		background-color: rgb(3, 246, 3);
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
+		cursor: pointer;
 	}
 	.support-modal:active {
 		height: 22px;
@@ -484,6 +493,7 @@
 		background-color: rgb(3, 246, 3);
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 		z-index: 2;
+		cursor: pointer;
 	}
 	.credit-modal:active {
 		height: 22px;

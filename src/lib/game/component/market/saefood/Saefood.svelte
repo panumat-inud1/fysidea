@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal, subModal } from './store';
+	//import { Modal, subModal } from './store';
 
 	// import icon
 	import { mdiHomeCircleOutline, mdiCloseThick } from '@mdi/js';
@@ -19,14 +19,14 @@
 	let policy = 'นโยบายส่วนตัว';
 </script>
 
-{#if $Modal}
+{#if open}
 	<div class="background-shadown" transition:fade={{ delay: 50, duration: 200 }}>
 		<div class="modal">
 			<div class="frame-out-modal">
 				<div class="frame-top-modal" />
 				<div class="menu-modal"><span>{menu}</span></div>
 				<!--Botton Clode-->
-				<div class="close-modal" on:click={Modal.coles}>
+				<div class="close-modal" on:click={() => (open = !open)}>
 					<div class="close-top-modal" />
 					<Icon component={Svg} viewBox="0 0 24 24">
 						<path fill="currentColor" d={mdiCloseThick} />
