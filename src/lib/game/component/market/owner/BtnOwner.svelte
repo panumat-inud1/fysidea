@@ -1,24 +1,24 @@
 <script lang="ts">
-	//import { Modal, subModal } from './store';
-	import { mdSaefood } from './saefood';
+	import { mdOwner, smdOwner } from './owner';
+
 	// import icon
-	import { mdiStorefront } from '@mdi/js';
+	import { mdiHomeCircleOutline, mdiAccountCash } from '@mdi/js';
 	import IconButton, { Icon } from '@smui/icon-button';
 	import { Svg } from '@smui/common/elements';
 </script>
 
-<div class="btn-saefood" on:click={mdSaefood.open}>
+<div class="btn-owner" on:click={mdOwner.open}>
 	<div class="out-frame">
 		<div class="in-frame">
 			<Icon component={Svg} viewBox="0 0 24 24">
-				<path fill="currentColor" d={mdiStorefront} />
+				<path fill="currentColor" d={mdiHomeCircleOutline} />
 			</Icon>
 		</div>
 	</div>
 </div>
 
 <style>
-	.btn-saefood {
+	.btn-owner {
 		position: absolute;
 		right: 10%;
 		bottom: 10%;
@@ -27,6 +27,7 @@
 		width: 36px;
 
 		z-index: 2;
+		cursor: pointer;
 	}
 	.out-frame {
 		position: absolute;
@@ -49,7 +50,7 @@
 		text-align: center;
 	}
 
-	.btn-saefood:active {
+	.btn-owner:active {
 		height: 34px;
 		width: 34px;
 	}
