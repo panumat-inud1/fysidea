@@ -2,10 +2,10 @@
 	//export let items = [];
 	//export let activeTabValue = 1;
 	import Machine from './tab/Machine.svelte';
-	import Tab2 from './tab/Tab2.svelte';
-	import Tab3 from './tab/Tab3.svelte';
-	import Tab4 from './tab/Tab4.svelte';
-	import Tab5 from './tab/Tab5.svelte';
+	import Store from './tab/Store.svelte';
+	import Freezer from './tab/Freezer.svelte';
+	import Stockpile from './tab/Stockpile.svelte';
+	import Vegetable from './tab/Vegetable.svelte';
 
 	// import icon
 	import { mdiCloseThick, mdiAccountCash } from '@mdi/js';
@@ -16,18 +16,17 @@
 	import { Tab } from './owner';
 	//Data json
 	let items = [
-		{ label: 'Machine', value: 1, component: Machine, x: 5, y: 0, t: Tab.tab1 },
-		{ label: 'Tab2', value: 2, component: Tab2, x: 24, y: 0, t: Tab.tab2 },
-		{ label: 'Tab3', value: 3, component: Tab3, x: 44, y: 0, t: Tab.tab3 },
-		{ label: 'Tab4', value: 4, component: Tab4, x: 63, y: 0, t: Tab.tab4 },
-		{ label: 'Tab5', value: 5, component: Tab5, x: 80, y: 0, t: Tab.tab5 }
+		{ label: 'Store', value: 1, component: Store, x: 5, y: 7, t: Tab.tab1 },
+		{ label: 'Machine', value: 2, component: Machine, x: 24, y: 7, t: Tab.tab2 },
+		{ label: 'Freezer', value: 3, component: Freezer, x: 43, y: 7, t: Tab.tab3 },
+		{ label: 'Stockpile', value: 4, component: Stockpile, x: 62, y: 7, t: Tab.tab4 },
+		{ label: 'Vegetable', value: 5, component: Vegetable, x: 81, y: 7, t: Tab.tab5 }
 	];
 </script>
 
 {#each items as item}
 	<div class="btn-tab" on:click={item.t} style="position: absolute;top: {item.y}%;left: {item.x}%;">
 		<div class="btn-tab-top" />
-
 		<div class="btn-frame-out">
 			<span>{item.label}</span>
 		</div>
@@ -48,10 +47,10 @@
 	/* box tab */
 	.box {
 		position: absolute;
-		top: 12%;
+		top: 15%;
 		left: 1%;
 
-		height: 87%;
+		height: 84%;
 		width: 98%;
 
 		border-radius: 6px;
@@ -70,10 +69,9 @@
 
 	/* botton tab*/
 	.btn-tab {
-		height: 10%;
+		height: 7%;
 		width: 14%;
-
-		border-radius: 12px;
+		border-radius: 6px;
 		background-color: #6eb061;
 		box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
 
@@ -81,25 +79,16 @@
 	}
 	.btn-frame-out {
 		position: absolute;
+		top: 0%;
+		left: 0%;
 
-		width: 99%;
-		height: 99%;
-		border-radius: 12px;
-		border: 1px solid #c0e1bd;
-	}
-
-	.btn-tab-top {
-		position: absolute;
-		top: 1%;
-		left: 1%;
-
-		width: 98%;
-		height: 6%;
+		width: 96.7%;
+		height: 96%;
 		border-radius: 6px;
-		background-color: rgba(255, 255, 255, 0.364);
+		border: 0.5px solid #c0e1bd;
 	}
 	.btn-tab:active {
-		height: 9%;
+		height: 6%;
 		width: 13%;
 	}
 	.btn-tab-top {
@@ -107,11 +96,12 @@
 		top: 2%;
 		left: 2%;
 
-		width: 96%;
+		width: 95%;
 		height: 50%;
-		border-radius: 12px;
-		background-color: rgba(255, 255, 255, 0.487);
+		border-radius: 6px;
+		background-color: rgba(255, 255, 255, 0.427);
 	}
+
 	span {
 		position: absolute;
 		bottom: 40%;
